@@ -1,19 +1,45 @@
 {
-  "name": "react-clock",
-  "version": "1.0.0",
-  "description": "A simple react clock component",
-  "main": "App.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "_from": "git+ssh://git@github.com/amanos1022/react-clock.git",
+  "_id": "react-clock@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha1-uLSaCcM6rUphAPCzRLpjd2ZWgWg=",
+  "_location": "/react-clock",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "react-clock@git+ssh://git@github.com/amanos1022/react-clock.git",
+    "name": "react-clock",
+    "escapedName": "react-clock",
+    "rawSpec": "git+ssh://git@github.com/amanos1022/react-clock.git",
+    "saveSpec": "git+ssh://git@github.com/amanos1022/react-clock.git",
+    "fetchSpec": "ssh://git@github.com/amanos1022/react-clock.git",
+    "gitCommittish": "master"
   },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+ssh://git@github.com/amanos1022/react-clock.git#5dfb4f082b519b9c2316f53ce047f7f287c4e6e0",
+  "_spec": "react-clock@git+ssh://git@github.com/amanos1022/react-clock.git",
+  "_where": "/Users/angelomanos/Projects/trusted.recoverybrands.com copy/mispots/mispots.com/releases/react-tester",
+  "author": {
+    "name": "Angelo Manos"
+  },
+  "bugs": {
+    "url": "https://github.com/amanos1022/react-clock/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "A simple react clock component",
+  "homepage": "https://github.com/amanos1022/react-clock#readme",
+  "license": "ISC",
+  "main": "App.js",
+  "name": "react-clock",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/amanos1022/react-clock.git"
   },
-  "author": "Angelo Manos",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/amanos1022/react-clock/issues"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/amanos1022/react-clock#readme"
+  "version": "1.0.0"
 }
