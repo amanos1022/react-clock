@@ -41,5 +41,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "dependencies": {
+    "react-svg": "^2.1.21",
+    "svg-to-react": "^0.1.0"
+  }
 }
