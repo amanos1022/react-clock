@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {HourHand, MinuteHand, MiddleCircle} from './res/HourHand';
 import ClockFace from './res/ClockElements';
 
 export default class Clock extends Component {
@@ -42,8 +41,8 @@ export default class Clock extends Component {
       let currentDate = new Date();
       let display = currentDate.getHours() + ':' + currentDate.getMinutes() + ':' + currentDate.getSeconds();
       let seconds = currentDate.getSeconds();
-      let minutes = currentDate.getMinutes();
-      let hours = currentDate.getHours();
+      let minutes = currentDate.getMinutes() + (seconds / 60);
+      let hours = currentDate.getHours() + (minutes / 60);
 
       _this.updateTime(display, seconds, minutes, hours);
     }, 1000)
@@ -51,12 +50,8 @@ export default class Clock extends Component {
   render() {
     let styles = {
       container : {
-        width: '400px',
-        height: '400px',
-        margin:'10% auto',
-        textAlign:'center',
-        fontSize: '3em',
-        border:'1px solid #555',
+        width: '100%',
+        height: '100%',
         position:'relative',
       },
       secondHand : {
@@ -72,9 +67,6 @@ export default class Clock extends Component {
   },
       minuteHand : {
         transformOrigin: 'bottom',
-        //transform: 'rotate('+this.state.minuteRotation+' 10)',
-        width:'6%',
-        height:'45%',
         position:'absolute',
         left:'50%',
         bottom:'50%',
@@ -82,22 +74,11 @@ export default class Clock extends Component {
       },
       hourHand : {
         transformOrigin: 'bottom',
-        transform: 'rotate('+this.state.hourRotation+'deg)',
-        width:'7%',
-        height:'33%',
         position:'absolute',
         left:'50%',
         bottom:'50%',
         transition: 'transform 300ms ease-in'
-      },
-      circle : {
-        width:'15%',
-        height: '15%',
-        position: 'absolute',
-        left: '44%',
-        top: '39%',
       }
-
     };
 
     return (
@@ -108,6 +89,7 @@ export default class Clock extends Component {
           hourStyle={styles.hourHand}
           minuteStyle={styles.minuteHand}
           minuteRotation={this.state.minuteRotation}
+          hourRotation={this.state.hourRotation}
           style={{width:'100%', height:'100%'}} />
         {/*{ this.state.time }*/}
       </div>
