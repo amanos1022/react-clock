@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {HourHand, MinuteHand, MiddleCircle} from './res/HourHand';
+import ClockFace from './res/ClockElements';
 
 export default class Clock extends Component {
   constructor(props) {
@@ -71,7 +72,7 @@ export default class Clock extends Component {
   },
       minuteHand : {
         transformOrigin: 'bottom',
-        transform: 'rotate('+this.state.minuteRotation+'deg)',
+        //transform: 'rotate('+this.state.minuteRotation+' 10)',
         width:'6%',
         height:'45%',
         position:'absolute',
@@ -101,11 +102,16 @@ export default class Clock extends Component {
 
     return (
       <div style={styles.container}>
-        <div style={styles.secondHand}>
-        </div>
-        <MinuteHand style={styles.minuteHand} />
-        <HourHand style={styles.hourHand} />
-        <MiddleCircle style={styles.circle} />
+        {/*<div style={styles.secondHand}>*/}
+        {/*</div>*/}
+        <ClockFace
+          hourStyle={styles.hourHand}
+          minuteStyle={styles.minuteHand}
+          minuteRotation={this.state.minuteRotation}
+          style={{width:'100%', height:'100%'}} />
+        {/*<MinuteHand style={styles.minuteHand} />*/}
+        {/*<HourHand style={styles.hourHand} />*/}
+        {/*<MiddleCircle style={styles.circle} />*/}
         {/*{ this.state.time }*/}
       </div>
     );
