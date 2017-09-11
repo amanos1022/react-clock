@@ -66,7 +66,7 @@ export default class Clock extends Component {
         width:'1px',
         height:'45%',
         position:'absolute',
-        left:'53%',
+        left:'50%',
         bottom:'50%',
         transition: 'transform 300ms ease-in'
   },
@@ -102,16 +102,13 @@ export default class Clock extends Component {
 
     return (
       <div style={styles.container}>
-        {/*<div style={styles.secondHand}>*/}
-        {/*</div>*/}
+        <div style={styles.secondHand}>
+        </div>
         <ClockFace
           hourStyle={styles.hourHand}
           minuteStyle={styles.minuteHand}
           minuteRotation={this.state.minuteRotation}
           style={{width:'100%', height:'100%'}} />
-        {/*<MinuteHand style={styles.minuteHand} />*/}
-        {/*<HourHand style={styles.hourHand} />*/}
-        {/*<MiddleCircle style={styles.circle} />*/}
         {/*{ this.state.time }*/}
       </div>
     );
